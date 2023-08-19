@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   const [msg, setMsg] = useState('');
 
-  const calculateInt = (value, divisor) => {
+  const calculateInt = (value, divisor) => {   // função para calcular números inteiros
     value = parseInt(value);
     divisor = parseInt(divisor);
 
@@ -12,8 +12,8 @@ function App() {
     let minValue, maxValue;
     let msg = '';
 
-    for (let i = 0; i < divisor; i++) {
-      if (i === divisor - 1) {
+    for (let i = 0; i < divisor; i++) { 
+      if (i === divisor - 1) {    // if para descobrir se é o ultimo loop
         minValue = result * i;
         maxValue = minValue + result;
       } else {
@@ -27,7 +27,7 @@ function App() {
     setMsg(msg);
   };
 
-  const calculateFloat = (value, divisor) => {
+  const calculateFloat = (value, divisor) => {  // função para calcular números com vírgula
     value = parseFloat(value);
     divisor = parseFloat(divisor);
 
@@ -51,12 +51,12 @@ function App() {
     setMsg(msg);
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = () => {   // adicionei um evento de click no botão
     const value = document.querySelector('#input_valor').value;
     const divisor = document.querySelector('#input_divisor').value;
-    setMsg('');
+    setMsg('');  // adicionei o setMsg para reiniciar o parágrafo sempre que clicar no botão
 
-    if (value % divisor === 0) {
+    if (value % divisor === 0) {  // if para descobrir se o calculo vai ser exato
       calculateInt(value, divisor);
     } else {
       calculateFloat(value, divisor);
