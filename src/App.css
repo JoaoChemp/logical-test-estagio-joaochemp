@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    border: 1px solid black;
+}
+
+span::before {
+    content: 'smart';
+    color: black;
+}
+
+span {
+    color: #ffbb36;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: max-content;
+    margin: 15px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article input {
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+    margin: 10px 0;
+    
+}
+
+button {
+    width: 165px;
+    height: 40px;
+    background-color: rgb(42, 35, 35);
+    color: white;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
